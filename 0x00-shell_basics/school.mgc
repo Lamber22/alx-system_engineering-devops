@@ -1,2 +1,3 @@
 #!/bin/bash
-a...
+0	string SCHOOL
+file --mime-type -m school.mgc * school

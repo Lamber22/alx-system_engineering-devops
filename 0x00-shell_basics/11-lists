@@ -1,2 +1,8 @@
 #!/bin/bash
-ls -a /boot
+dir=$(pwd) &(/boot)
+
+echo -e "We will list all the Hidden file in the current Directory & the parent of the working directory and the /boot directory$dir"
+
+# find <path> <pattern> <action>
+
+find . -type f -name ".*" -ls

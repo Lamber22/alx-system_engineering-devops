@@ -1,3 +1,4 @@
 #!/bin/bash
-0	string SCHOOL This is a school file
- --mime-type -m File type: School data
+0 string SCHOOL School data
+
+!:mime School

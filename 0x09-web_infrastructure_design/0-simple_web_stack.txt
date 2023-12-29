@@ -29,14 +29,16 @@ Questions with explainations
    modification, and manipulation of information in response to application or user requests
 
 7. What is the server using to communicate with the computer of the user requesting the website?
-   The server communicates with the user's computer using the Hypertext Transfer Protocol (HTTP) or its secure version, HTTPS, over the Internet.
+   The server communicates with the user's computer using the Hypertext Transfer Protocol (HTTP) or its secure version,
+   HTTPS, over the Internet.
 
 =============================================================================================================
 = Issues with using a single web server, single application server, single database, and a single code base =
 =============================================================================================================
 
-i.	A Single Point of Failure (SPOF) is a critical component in a system or network that, if it fails, leads to the entire system's failure.
-	There are a lot of single points of failures starting from having one server that contains only one web server, application server, and database.
+i.	A Single Point of Failure (SPOF) is a critical component in a system or network that, if it fails, leads to the
+	entire system's failure. There are a lot of single points of failures starting from having one server that contains
+	only one web server, application server, and database.
 
 ii.	Downtime when maintenance is needed (like deploying a new code web server
 	needs to be restarted); The downtime period might be longer than expected because the server is dependent on one
@@ -44,5 +46,6 @@ ii.	Downtime when maintenance is needed (like deploying a new code web server
 	which results in a bad user experience and loss of traffic.
 
 iii.	Cannot scale if too much incoming traffic; The domain name points directly at the server hence doesn’t contain a load
-	balancer which allows handling increased load easier. This poses an issue to the volume of users trying to access the website’s content
-        and can lead to poor user experience or rather set a limit to the number of users the website will be able to accommodate.
+	balancer which allows handling increased load easier. This poses an issue to the volume of users trying to access the
+	website’s content and can lead to poor user experience or rather set a limit to the number of users the website will be
+	able to accommodate.

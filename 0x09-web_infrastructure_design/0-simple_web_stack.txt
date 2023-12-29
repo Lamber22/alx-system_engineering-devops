@@ -1,0 +1,48 @@
+#0-simple_web_stack.txt
+============================
+Questions with explainations
+============================
+
+1. What is a server?
+   A server is a computer or system that provides resources, services, or data to other computers,
+   known as clients, within a network. It responds to requests from clients, facilitating communication, data storage,
+   or other specific functions in a networked environment
+ 
+2. What is the role of the domain name?
+   The role of a domain name is to serve as a human-readable, alphanumeric label that represents a specific IP address on
+   the internet. It provides an easy way for users to access websites, email services, or other online resources without
+   needing to remember numerical IP addresses.
+
+3. What type of DNS record www is in www.foobar.com?
+   The "www" in "www.foobar.com" typically corresponds to a CNAME (Canonical Name) DNS record.
+
+4. What is the role of the web server?
+   The web server's role is to handle incoming HTTP requests from clients (web browsers), process these requests, and
+   deliver web content (such as HTML pages, images, or other resources) to the clients over the internet.
+
+5. What is the role of the application server?
+   The application server's role is to execute and manage business logic, handle application-specific operations, and
+   facilitate communication between the web server and backend databases or other services in a web application.
+
+6. What is the role of the database?
+   The database's role is to store, manage, and organize data in a structured format, allowing for efficient retrieval,
+   modification, and manipulation of information in response to application or user requests
+
+7. What is the server using to communicate with the computer of the user requesting the website?
+   The server communicates with the user's computer using the Hypertext Transfer Protocol (HTTP) or its secure version, HTTPS, over the Internet.
+
+=============================================================================================================
+= Issues with using a single web server, single application server, single database, and a single code base =
+=============================================================================================================
+
+i.	A Single Point of Failure (SPOF) is a critical component in a system or network that, if it fails, leads to the entire system's failure.
+	There are a lot of single points of failures starting from having one server that contains only one web server, application server, and database.
+
+ii.	Downtime when maintenance is needed (like deploying a new code web server
+	needs to be restarted); The downtime period might be longer than expected because the server is dependent on one
+	code base which at that moment, isn’t available. Users will therefore not be able to access the website and its contents
+	which results in a bad user experience and loss of traffic.
+
+iii.	Cannot scale if too much incoming traffic; The domain name points directly at the server hence doesn’t contain a load
+	balancer which allows handling increased load easier. This poses an issue to the volume of users trying to access the website’s content
+        and can lead to poor user experience or rather set a limit to the number of users the website will be able to accommodate.

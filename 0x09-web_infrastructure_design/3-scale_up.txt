@@ -1,0 +1,15 @@
+=========================
+Web infrastructure design
+=========================
+
+===========================
+Questions and Explanations.
+===========================
+
+1. For every additional element, why are adding it?
+   I added one server and one load balancer. Adding the new server has allowed us
+   to separate each component (web server; Nginx, Application server; code base
+   and Database; MySQL) in there own server and yet having one extra server with
+   all the components to serve as a backup if any of the components or server fails.
+
+   

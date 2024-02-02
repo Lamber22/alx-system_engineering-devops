@@ -39,8 +39,8 @@ frontend lamberjkpukuyou-tech-frontend
 
 backend lamberjkpukuyou-tech-backend
     balance roundrobin
-    server 203516-web-01 3.85.41.102 check
-    server 203516-web-02 54.237.82.92 check
+    server 203516-web-01 3.85.41.102:80 check
+    server 203516-web-02 54.237.82.92:80 check
 "
 
 # shellcheck disable=SC2154

@@ -33,11 +33,11 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend clickviral-tech-frontend
+frontend lamberjkpukuyou-tech-frontend
     bind *:80
-    default_backend clickviral-tech-backend
+    default_backend lamberjkpukuyou-tech-backend
 
-backend clickviral-tech-backend
+backend lamberjkpukuyou-tech-backend
     balance roundrobin
     server 203516-web-01 3.85.41.102 check
     server 203516-web-02 54.237.82.92 check

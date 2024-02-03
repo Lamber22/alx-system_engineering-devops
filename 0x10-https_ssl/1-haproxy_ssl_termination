@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend lamberjkpukuyou-frontend
+frontend lamberjkpukuyou-tech-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend lamberjkpukuyou-backend
+        default_backend lamberjkpukuyou-tech-backend
 
 frontend lamberjkpukuyou-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/lamberjkpukuyou.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend lamberjkpukuyou-backend
+        default_backend lamberjkpukuyou-tech-backend
 
-backend lamberjkpukuyou-backend
+backend lamberjkpukuyou-tech-backend
         balance roundrobin
         server 203516-web-01 3.85.41.102:80 check
         server 203516-web-02 54.237.82.92:80 check
